@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="XAFNewProject">
+  <ActionDesign>
+    <Actions>
+      <Action Id="CreateCurrentAction" TargetObjectsCriteria="!IsFinancialCreated" />
+      <Action Id="CreateStockAction" TargetObjectsCriteria="!IsStockCreated" />
+      <Action Id="SaveAndNew" PaintStyle="Default" />
+      <Action Id="ShowNavigationItem" ShowItemsOnClick="True" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
+  </BOModel>
+  <CreatableItems>
+    <CreatableItem ClassName="XAFInvoiceProject.Module.BusinessObjects.PurchaseManagement.Customer" Removed="True" />
+    <CreatableItem ClassName="XAFInvoiceProject.Module.BusinessObjects.PurchaseManagement.Invoice" Removed="True" />
+    <CreatableItem ClassName="XAFInvoiceProject.Module.BusinessObjects.StockManagement.Product" Removed="True" />
+    <CreatableItem ClassName="XAFInvoiceProject.Module.BusinessObjects.StockManagement.UnitSet" Removed="True" />
+    <CreatableItem ClassName="XAFInvoicesProject.Module.BusinessObjects.PurchaseManagement.FinancialTrx" Removed="True" />
+    <CreatableItem ClassName="XAFInvoicesProject.Module.BusinessObjects.PurchaseManagement.InvoiceItem" Removed="True" />
+    <CreatableItem ClassName="XAFInvoicesProject.Module.BusinessObjects.PurchaseManagement.OrderItem" Removed="True" />
+    <CreatableItem ClassName="XAFInvoicesProject.Module.BusinessObjects.PurchaseManagement.VatDefinition" Removed="True" />
+    <CreatableItem ClassName="XAFInvoicesProject.Module.BusinessObjects.StockManagement.Category" Removed="True" />
+    <CreatableItem ClassName="XAFInvoicesProject.Module.BusinessObjects.StockManagement.StockTrx" Removed="True" />
+    <CreatableItem ClassName="XAFNewProject.Module.BusinessObjects.PurchaseManagement.City" Removed="True" />
+    <CreatableItem ClassName="XAFNewProject.Module.BusinessObjects.PurchaseManagement.District" Removed="True" />
+    <CreatableItem ClassName="XAFOrdersProject.Module.BusinessObjects.PurchaseManagement.Order" Removed="True" />
+  </CreatableItems>
+  <Localization>
+    <LocalizationGroup Name="FrameTemplates" IsNewNode="True">
+      <LocalizationGroup Name="DevExpress.ExpressApp.Win.Templates.Ribbon.OutlookStyleMainRibbonForm" IsNewNode="True">
+        <LocalizationItem Name="barContainerSave.Caption" IsNewNode="True" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems ShowImages="True">
+    <Items>
+      <Item Id="ActionTable" Caption="ActionTable" ImageName="BO_Opportunity" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="FinancialList_ListView" ViewId="FinancialList_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="FinancialTrx_ListView" ViewId="FinancialTrx_ListView" ObjectKey="" ImageName="BO_Dashboard" IsNewNode="True" />
+          <Item Id="StockList_ListView" ViewId="StockList_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="StockTrx_ListView" ViewId="StockTrx_ListView" ObjectKey="" ImageName="BO_Report" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="Default" Caption="Authorization">
+        <Items>
+          <Item Id="Category_ListView" Removed="True" />
+          <Item Id="City_ListView" Removed="True" />
+          <Item Id="Customer_ListView" Removed="True" />
+          <Item Id="District_ListView" Removed="True" />
+          <Item Id="FinancialTrx_ListView" Removed="True" />
+          <Item Id="Invoice_ListView" Removed="True" />
+          <Item Id="InvoiceItem_ListView" Visible="False" Removed="True" />
+          <Item Id="Order_ListView" Removed="True" />
+          <Item Id="OrderItem_ListView" Visible="False" Removed="True" />
+          <Item Id="Product_ListView" Removed="True" />
+          <Item Id="StockTrx_ListView" Removed="True" />
+          <Item Id="UnitSet_ListView" Removed="True" />
+          <Item Id="VatDefinition_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="PurchaseFolder" Caption="PurchaseFolder" ImageName="Currency" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="City_ListView" ViewId="City_ListView" ObjectKey="" ImageName="BO_Country_v92" IsNewNode="True" />
+          <Item Id="Customer_ListView" ViewId="Customer_ListView" ObjectKey="" ImageName="BO_Customer" IsNewNode="True" />
+          <Item Id="District_ListView" ViewId="District_ListView" ObjectKey="" ImageName="MapIt" IsNewNode="True" />
+          <Item Id="Invoice_ListView" ViewId="Invoice_ListView" ObjectKey="" ImageName="BO_List" IsNewNode="True" />
+          <Item Id="InvoiceItem_ListView" ViewId="InvoiceItem_ListView" ObjectKey="" Visible="False" IsNewNode="True" />
+          <Item Id="Order_ListView" ViewId="Order_ListView" ObjectKey="" ImageName="BO_Vendor" IsNewNode="True" />
+          <Item Id="OrderItem_ListView" ViewId="OrderItem_ListView" ObjectKey="" Visible="False" IsNewNode="True" />
+          <Item Id="VatDefinition_ListView" ViewId="VatDefinition_ListView" ObjectKey="" ImageName="BO_PivotChart" IsNewNode="True" />
+        </Items>
+      </Item>
+      <Item Id="StockFolder" Caption="StockFolder" ImageName="BO_Order_Item" IsNewNode="True">
+        <Items IsNewNode="True">
+          <Item Id="Category_ListView" ViewId="Category_ListView" ObjectKey="" ImageName="BO_Product_Group" IsNewNode="True" />
+          <Item Id="Product_ListView" ViewId="Product_ListView" ObjectKey="" IsNewNode="True" />
+          <Item Id="UnitSet_ListView" ViewId="UnitSet_ListView" ObjectKey="" ImageName="BO_Project" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="23.1.5.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="23.1.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <ListView Id="Category_LookupListView" AllowNew="False" />
+    <ListView Id="Category_Products_ListView" AllowLink="False" AllowNew="True" NewItemRowPosition="Top" AllowEdit="True">
+      <Columns>
+        <ColumnInfo Id="Code" Index="0" />
+        <ColumnInfo Id="Name" Index="1" Width="178" />
+      </Columns>
+    </ListView>
+    <ListView Id="City_Districts_ListView" AllowEdit="True" AllowNew="True" NewItemRowPosition="Top" AllowLink="False" />
+    <ListView Id="City_LookupListView" AllowNew="False" />
+    <DetailView Id="Customer_DetailView" AllowNew="False" />
+    <ListView Id="Customer_ListView" AllowEdit="True" AllowLink="False" NewItemRowPosition="Top" ShowAutoFilterRow="False" AllowNew="True">
+      <Columns>
+        <ColumnInfo Id="District.Name" PropertyName="District.Name" Index="-1" Width="145" SortIndex="0" SortOrder="Descending" IsNewNode="True" />
+        <ColumnInfo Id="Code" Index="0" />
+        <ColumnInfo Id="Name" Width="117" Index="1" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="CustomerTypes" Index="2" Width="41" />
+        <ColumnInfo Id="TaxTypes" Index="3" />
+        <ColumnInfo Id="TaxNumber" Index="4" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="District" Index="6" />
+        <ColumnInfo Id="PhoneNumber1" Index="7" />
+        <ColumnInfo Id="PhoneNumber2" Index="8" />
+        <ColumnInfo Id="MailAdress" Index="9" />
+      </Columns>
+    </ListView>
+    <ListView Id="Customer_LookupListView" AllowNew="False" />
+    <ListView Id="District_LookupListView" AllowNew="False" />
+    <DetailView Id="FinancialTrx_DetailView">
+      <Items>
+        <PropertyEditor Id="Credit" AllowEdit="False" />
+        <PropertyEditor Id="Debit" AllowEdit="False" />
+        <PropertyEditor Id="Invoice.InvoiceNo" PropertyName="Invoice.InvoiceNo" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="FinancialTrx" RelativeSize="100">
+              <LayoutGroup Id="FinancialTrx_col1" RelativeSize="50">
+                <LayoutItem Id="CreateDate" RelativeSize="5.734767025089606" />
+                <LayoutItem Id="Invoice.InvoiceNo" ViewItem="Invoice.InvoiceNo" Index="3" RelativeSize="85.66308243727599" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="FinancialTrx_col2" RelativeSize="50">
+                <LayoutItem Id="FinancialType" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="FinancialTrx_ListView" AllowEdit="True" AllowNew="False" NewItemRowPosition="Top" AllowLink="False">
+      <Columns>
+        <ColumnInfo Id="FinancialType" AllowEdit="False" Index="-1" />
+        <ColumnInfo Id="Invoice" Index="1" />
+        <ColumnInfo Id="Invoice.InvoiceNo" PropertyName="Invoice.InvoiceNo" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="Customer" Index="3" />
+        <ColumnInfo Id="Debit" AllowEdit="False" Index="4" />
+        <ColumnInfo Id="Credit" AllowEdit="False" Index="5" />
+      </Columns>
+    </ListView>
+    <ListView Id="FinancialTrx_ListView_CustomerList" ClassName="XAFInvoicesProject.Module.BusinessObjects.PurchaseManagement.FinancialTrx" AllowEdit="True" AllowNew="False" NewItemRowPosition="Top" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="FinancialType" PropertyName="FinancialType" AllowEdit="False" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Invoice" PropertyName="Invoice" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Invoice.InvoiceNo" PropertyName="Invoice.InvoiceNo" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="CreateDate" PropertyName="CreateDate" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="Customer" PropertyName="Customer" Index="1" Width="89" IsNewNode="True" />
+        <ColumnInfo Id="Debit" PropertyName="Debit" AllowEdit="False" Index="2" Width="59" IsNewNode="True" />
+        <ColumnInfo Id="Credit" PropertyName="Credit" AllowEdit="False" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="Balance" PropertyName="Balance" Index="4" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Invoice_DetailView" AllowNew="False" />
+    <ListView Id="Invoice_InvoiceItems_ListView" AllowEdit="True" NewItemRowPosition="Top" AllowLink="False" AllowUnlink="False" AllowNew="True" AutoExpandAllGroups="False">
+      <Columns>
+        <ColumnInfo Id="Product" SortIndex="-1" SortOrder="None" Index="0" />
+        <ColumnInfo Id="Piece" Index="1" />
+        <ColumnInfo Id="Product.UnitPrice" PropertyName="Product.UnitPrice" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="VatAmount" Index="3" />
+        <ColumnInfo Id="NetAmount" Index="4" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="Product.VatDefinition.VatRate" PropertyName="Product.VatDefinition.VatRate" Index="5" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="Invoice_ListView" AllowNew="True" AllowEdit="True" NewItemRowPosition="Top" AllowDelete="False" AllowLink="False">
+      <Columns>
+        <ColumnInfo Id="IsFinancialCreated" Index="-1" />
+        <ColumnInfo Id="IsStockCreated" Index="-1" />
+        <ColumnInfo Id="InvoiceNo" Index="1" />
+        <ColumnInfo Id="PaymentType" Index="2" />
+        <ColumnInfo Id="InvoiceType" Width="79" Index="3" />
+        <ColumnInfo Id="TaxOffice" Index="4" />
+        <ColumnInfo Id="TaxNo" Index="5" />
+        <ColumnInfo Id="CreatedDate" Index="6" />
+        <ColumnInfo Id="TotalNetAmount" Index="7" />
+        <ColumnInfo Id="TotalVatAmount" Index="8" />
+        <ColumnInfo Id="TotalAmount" Index="9" />
+        <ColumnInfo Id="Customer" Index="10" />
+      </Columns>
+    </ListView>
+    <ListView Id="Invoice_LookupListView" AllowNew="True" AllowEdit="True" />
+    <ListView Id="InvoiceItem_ListView" AllowNew="True" />
+    <ListView Id="InvoiceItem_LookupListView" AllowNew="False" />
+    <ListView Id="Order_ListView">
+      <Columns>
+        <ColumnInfo Id="IsOrderCreated" Index="-1" />
+        <ColumnInfo Id="OrderNo" Index="1" />
+        <ColumnInfo Id="TaxOffice" Index="2" />
+        <ColumnInfo Id="TaxNo" Index="3" />
+        <ColumnInfo Id="CreatedDate" Index="4" />
+        <ColumnInfo Id="TotalNetAmount" Index="5" />
+        <ColumnInfo Id="TotalVatAmount" Index="6" />
+        <ColumnInfo Id="TotalAmount" Index="7" />
+        <ColumnInfo Id="PaymentType" Width="87" Index="8" />
+        <ColumnInfo Id="Customer" Index="9" />
+      </Columns>
+    </ListView>
+    <ListView Id="Order_OrderItems_ListView" AllowLink="False" AllowUnlink="False" NewItemRowPosition="Top" AllowEdit="True">
+      <Columns>
+        <ColumnInfo Id="Product" Index="0" />
+        <ColumnInfo Id="Piece" Index="1" />
+        <ColumnInfo Id="Product.UnitPrice" PropertyName="Product.UnitPrice" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="VatAmount" Index="3" />
+        <ColumnInfo Id="NetAmount" Index="4" />
+        <ColumnInfo Id="Product.VatDefinition.VatRate" PropertyName="Product.VatDefinition.VatRate" Index="5" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="OrderItem_ListView" NewItemRowPosition="Top" AllowEdit="True" AllowLink="False" AllowUnlink="False" />
+    <ListView Id="StockTrx_ListView">
+      <Columns>
+        <ColumnInfo Id="Invoice" Index="-1" />
+        <ColumnInfo Id="StockActionType" Width="97" Index="-1" />
+        <ColumnInfo Id="Product" Index="1" />
+        <ColumnInfo Id="Entry" Index="2" />
+        <ColumnInfo Id="Output" Index="3" />
+        <ColumnInfo Id="Balance" Index="4" />
+      </Columns>
+    </ListView>
+    <ListView Id="StockTrx_ListView_ProductList" ClassName="XAFInvoicesProject.Module.BusinessObjects.StockManagement.StockTrx" AllowDelete="False" AllowLink="False" AllowNew="False" IsNewNode="True">
+      <Columns IsNewNode="True">
+        <ColumnInfo Id="Invoice" PropertyName="Invoice" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="Oid" PropertyName="Oid" Index="-1" IsNewNode="True" />
+        <ColumnInfo Id="StockActionType" PropertyName="StockActionType" Index="-1" Width="97" IsNewNode="True" />
+        <ColumnInfo Id="Date" PropertyName="Date" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="Product" PropertyName="Product" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="Entry" PropertyName="Entry" Index="2" IsNewNode="True" />
+        <ColumnInfo Id="Output" PropertyName="Output" Index="3" IsNewNode="True" />
+        <ColumnInfo Id="Balance" PropertyName="Balance" Index="4" IsNewNode="True" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

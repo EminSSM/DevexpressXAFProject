@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <CreatableItems Id="CreatableItems">
+    <CreatableItem ClassName="XAFNewProject.Module.BusinessObjects.StockManagement.StockList" Removed="True" />
+  </CreatableItems>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="ActionTable">
+        <Items Id="Items">
+          <Item Id="StockList_ListView" ViewId="StockList_ListView" />
+        </Items>
+      </Item>
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="StockList_ListView" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

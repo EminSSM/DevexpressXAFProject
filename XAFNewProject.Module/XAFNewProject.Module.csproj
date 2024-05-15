@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <Deterministic>false</Deterministic>
+    <AssemblyVersion>1.0.*</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Configurations>Debug;Release;EasyTest</Configurations>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Model.DesignedDiffs.Localization.en.xafml" />
+    <None Remove="Model.DesignedDiffs.Localization.tr.xafml" />
+    <None Remove="Model.DesignedDiffs.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.Localization.en.xafml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.Localization.tr.xafml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.ExpressApp" Version="23.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.AuditTrail.Xpo" Version="23.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.CloneObject.Xpo" Version="23.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" Version="23.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.ConditionalAppearance" Version="23.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Objects" Version="23.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.PivotGrid" Version="23.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.ReportsV2" Version="23.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="23.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.TreeListEditors" Version="23.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation" Version="23.1.5" />
+    <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="23.1.5" />
+    <PackageReference Include="DevExpress.Persistent.Base" Version="23.1.5" />
+    <PackageReference Include="DevExpress.Persistent.BaseImpl.Xpo" Version="23.1.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="UnusableNodes.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+    </None>
+    <None Update="UnusableNodes1.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+    </None>
+    <None Update="UnusableNodes2.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+    </None>
+    <None Update="UnusableNodes3.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+    </None>
+    <None Update="UnusableNodes4.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+    </None>
+    <None Update="UnusableNodes5.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+    </None>
+  </ItemGroup>
+</Project>

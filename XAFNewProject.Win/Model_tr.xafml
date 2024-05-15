@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="Cancel" ShortCaption="İptal Et" Caption="İptal" />
+      <Action Id="Close" Caption="Kapat" />
+      <Action Id="CreateCurrentAction" Caption="Cari Hareket Oluştur" />
+      <Action Id="CreateInvoice" Caption="Fatura Oluştur" />
+      <Action Id="CreateStockAction" Caption="Stok Hareketi Oluştur" />
+      <Action Id="Delete" Caption="Sil" />
+      <Action Id="DeleteInvoice" Caption="Fatura Sil" />
+      <Action Id="Exit" Caption="Çıkış" />
+      <Action Id="MyDetails" Caption="Detaylarım" />
+      <Action Id="New" Caption="Yeni" />
+      <Action Id="Refresh" Caption="Yenile" />
+      <Action Id="RefreshAction" Caption="Yenieleme Hareketleri" />
+      <Action Id="ResetPassword" Caption="Şifreyi Sıfırla" />
+      <Action Id="Save" Caption="Kaydet" />
+      <Action Id="SaveAndClose" Caption="Kaydet ve Çık" />
+      <Action Id="SaveAndNew" Caption="Kaydet ve Yeni" />
+      <Action Id="Unlink" Caption="Linki Kaldır" />
+      <Action Id="XPViewAction" Caption="XPHareketlerini Göster" />
+    </Actions>
+    <ActionToContainerMapping>
+      <ActionContainer Id="Edit" Caption="Değişiklik" />
+      <ActionContainer Id="ListView" Caption="ListeGörüntüleme" />
+      <ActionContainer Id="Menu" Caption="Menü" />
+      <ActionContainer Id="RecordsNavigation" Caption="KayıtNavigasyonu" />
+      <ActionContainer Id="Reports" Caption="Raporlar" />
+      <ActionContainer Id="Save" Caption="Kaydet" />
+      <ActionContainer Id="View" Caption="Görüntüleme" />
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters">
+      <OwnMembers>
+        <Member Name="Password" Caption="Şifre" />
+        <Member Name="UserName" Caption="Kullanıcı Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="XAFInvoiceProject.Module.BusinessObjects.PurchaseManagement.Customer" Caption="Müşteri">
+      <OwnMembers>
+        <Member Name="Balance" Caption="Toplam" />
+        <Member Name="City" Caption="Şehir" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="CreateDate" Caption="Oluşturma Tarihi" />
+        <Member Name="Credit" Caption="Alacak" />
+        <Member Name="CustomerFinancialTrx" Caption="Müşteri Finans Hareketleri" />
+        <Member Name="CustomerTypes" Caption="Cari Tipi" />
+        <Member Name="Debit" Caption="Borç" />
+        <Member Name="District" Caption="İlçe" />
+        <Member Name="MailAdress" Caption="Mail Adresi" />
+        <Member Name="Name" Caption="Müşteri Adı" />
+        <Member Name="PhoneNumber1" Caption="Tel No 1" />
+        <Member Name="PhoneNumber2" Caption="Tel No 2" />
+        <Member Name="TaxNumber" Caption="Vergi Numarası" />
+        <Member Name="TaxTypes" Caption="Vergi Tipi" />
+      </OwnMembers>
+    </Class>
+    <Class Name="XAFInvoiceProject.Module.BusinessObjects.PurchaseManagement.Invoice" Caption="Fatura">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="CreatedDate" Caption="Oluşturma Tarihi" />
+        <Member Name="Customer" Caption="Müşteri Adı" />
+        <Member Name="InvoiceItems" Caption="Farura Satırları" />
+        <Member Name="InvoiceNo" Caption="Fatura No" />
+        <Member Name="InvoiceType" Caption="Fatura Tipi" />
+        <Member Name="PaymentType" Caption="Ödeme Tipi" />
+        <Member Name="TaxNo" Caption="Vergi No" />
+        <Member Name="TaxOffice" Caption="Vergi Ofisi" />
+        <Member Name="TotalAmount" Caption="Toplam Miktar" />
+        <Member Name="TotalNetAmount" Caption="Toplam Net Miktarı" />
+        <Member Name="TotalVatAmount" Caption="Toplam Kredi Miktarı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="XAFInvoiceProject.Module.BusinessObjects.StockManagement.Product" Caption="Ürün">
+      <OwnMembers>
+        <Member Name="Category" Caption="Kategori" />
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="CreatedDate" Caption="Oluşturma Tarihi" />
+        <Member Name="Description" Caption="Açıklama" />
+        <Member Name="Name" Caption="Ürün Adı" />
+        <Member Name="UnitPrice" Caption="Birim Fiyatı" />
+        <Member Name="UnitSet" Caption="Birim" />
+        <Member Name="VatDefinition" Caption="KDV Durumları" />
+      </OwnMembers>
+    </Class>
+    <Class Name="XAFInvoiceProject.Module.BusinessObjects.StockManagement.UnitSet" Caption="Birim">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Name" Caption="Birim Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="XAFInvoicesProject.Module.BusinessObjects.PurchaseManagement.FinancialTrx" Caption="Finans Hareketkerl">
+      <OwnMembers>
+        <Member Name="Balance" Caption="Toplam Fiyat" />
+        <Member Name="CreateDate" Caption="Oluşturma Tarihi" />
+        <Member Name="Credit" Caption="Alacak" />
+        <Member Name="Customer" Caption="Müşteri Adı" />
+        <Member Name="Debit" Caption="Borç" />
+        <Member Name="FinancialType" Caption="Finans Tipi" />
+        <Member Name="Invoice" Caption="Fatura" />
+      </OwnMembers>
+    </Class>
+    <Class Name="XAFInvoicesProject.Module.BusinessObjects.PurchaseManagement.InvoiceItem" Caption="Fatura Satırı" />
+    <Class Name="XAFInvoicesProject.Module.BusinessObjects.PurchaseManagement.OrderItem" Caption="Sipariş Satırı" />
+    <Class Name="XAFInvoicesProject.Module.BusinessObjects.PurchaseManagement.VatDefinition" Caption="KDV Durumları">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Name" Caption="Adı" />
+        <Member Name="VatRate" Caption="KDV Oranı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="XAFInvoicesProject.Module.BusinessObjects.StockManagement.Category" Caption="Kategori">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="Name" Caption="Kategori Adı" />
+        <Member Name="Products" Caption="Ürünler" />
+      </OwnMembers>
+    </Class>
+    <Class Name="XAFInvoicesProject.Module.BusinessObjects.StockManagement.StockTrx">
+      <OwnMembers>
+        <Member Name="Balance" Caption="Toplam Miktar" />
+        <Member Name="Date" Caption="Oluşturma Tarihi" />
+        <Member Name="Entry" Caption="Giriş" />
+        <Member Name="Invoice" Caption="Fatura" />
+        <Member Name="Output" Caption="Çıkış" />
+        <Member Name="Product" Caption="Ürün Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="XAFNewProject.Module.BusinessObjects.PurchaseManagement.City" Caption="Şehir">
+      <OwnMembers>
+        <Member Name="CityCode" Caption="Şehir Kodu" />
+        <Member Name="Districts" Caption="İlçeler" />
+        <Member Name="Name" Caption="Şehir" />
+      </OwnMembers>
+    </Class>
+    <Class Name="XAFNewProject.Module.BusinessObjects.PurchaseManagement.District" Caption="İlçe">
+      <OwnMembers>
+        <Member Name="City" Caption="Şehir Adı" />
+        <Member Name="DistrictCode" Caption="İlçe Kodu" />
+        <Member Name="Name" Caption="İlçe Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="XAFOrdersProject.Module.BusinessObjects.PurchaseManagement.Order">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kodu" />
+        <Member Name="CreatedDate" Caption="Oluşturma Tarihi" />
+        <Member Name="Customer" Caption="Müşteri Adı" />
+        <Member Name="OrderItems" Caption="Fatura Satırları" />
+        <Member Name="OrderNo" Caption="Fatura No" />
+        <Member Name="PaymentType" Caption="Ödeme Tipi" />
+        <Member Name="TaxNo" Caption="Vergi No" />
+        <Member Name="TaxOffice" Caption="Vergi Ofisi" />
+        <Member Name="TotalAmount" Caption="Toplam Miktar" />
+        <Member Name="TotalNetAmount" Caption="Toplam Net Miktar" />
+        <Member Name="TotalVatAmount" Caption="Toplam KDV Miktarı" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="ActionTable" Caption="Hareket Tabloları">
+        <Items>
+          <Item Id="FinancialTrx_ListView" Caption="Finansal Hareketler" />
+          <Item Id="StockTrx_ListView" Caption="Stock Hareketler" />
+        </Items>
+      </Item>
+      <Item Id="Default" Caption="Kullanıcı Paneli">
+        <Items>
+          <Item Id="ApplicationUser_ListView" Caption="Kullanıcılar" />
+          <Item Id="MyDetails" Caption="Detaylar" />
+        </Items>
+      </Item>
+      <Item Id="PurchaseFolder" Caption="Satın Alma İşlemleri">
+        <Items>
+          <Item Id="Customer_ListView" Caption="Müşteri" />
+          <Item Id="Invoice_ListView" Caption="Fatura" />
+          <Item Id="Order_ListView" Caption="Sipariş" />
+        </Items>
+      </Item>
+      <Item Id="Reports" Caption="Raporlar">
+        <Items>
+          <Item Id="ReportsV2" Caption="Raporlar" />
+        </Items>
+      </Item>
+      <Item Id="StockFolder" Caption="Stok Hareketleri">
+        <Items>
+          <Item Id="Product_ListView" Caption="Ürünler" />
+          <Item Id="UnitSet_ListView" Caption="Birim" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Views>
+    <DetailView Id="Category_DetailView">
+      <Items>
+        <PropertyEditor Id="Code" Caption="Kodu" />
+        <PropertyEditor Id="Name" Caption="KategoriAdı" />
+        <PropertyEditor Id="Products" Caption="Ürünler" />
+      </Items>
+    </DetailView>
+    <ListView Id="Category_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="KategoriAdı" />
+        <ColumnInfo Id="Code" Caption="Kodu" />
+      </Columns>
+    </ListView>
+    <ListView Id="City_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Şehir Adı" />
+        <ColumnInfo Id="CityCode" Caption="Şehir Kodu" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

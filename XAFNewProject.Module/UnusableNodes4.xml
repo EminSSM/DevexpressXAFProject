@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <CreatableItems Id="CreatableItems">
+    <CreatableItem ClassName="XAFNewProject.Module.BusinessObjects.PurchaseManagement.FinancialList" Removed="True" />
+  </CreatableItems>
+  <Views Id="Views">
+    <ListView Id="FinancialList_ListView" AllowEdit="True" />
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="ActionTable">
+        <Items Id="Items">
+          <Item Id="StockList_ListView" ViewId="StockList_ListView" />
+          <Item Id="FinancialList_ListView" ViewId="FinancialList_ListView" />
+        </Items>
+      </Item>
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="FinancialList_ListView" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

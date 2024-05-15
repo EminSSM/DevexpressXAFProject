@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <ActionToContainerMapping>
+      <ActionContainer Id="Tools" Caption="Araçlar" />
+      <ActionContainer Id="View" Caption="Pencere" />
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="XAFNewProject.Module.BusinessObjects.PurchaseManagement.City" Caption="City" />
+    <Class Name="XAFNewProject.Module.BusinessObjects.PurchaseManagement.District" Caption="İlçe" />
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="FrameTemplates">
+      <LocalizationGroup Name="DevExpress.ExpressApp.Win.Templates.Ribbon.OutlookStyleMainRibbonForm">
+        <LocalizationItem Name="barContainerSave.Caption" Value="Kaydet" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+</Application>
